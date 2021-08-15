@@ -1,0 +1,16 @@
+{
+    "name": "ohmyfood",
+    "version": "1.0.0",
+    "description": "3rd project OCR",
+    "main": "index.html",
+    "scripts": {
+  "sass":"sass --watch ./sass/main.scss:./public/css/style.css"  },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "author": "walden",
+    "license": "",
+    "homepage": ""
+  }
+  
