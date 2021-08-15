@@ -7,10 +7,10 @@
   "sass":"sass --watch ./sass/main.scss:./public/css/style.css"  },
     "repository": {
       "type": "git",
-      "url": ""
+      "url": "https://github.com/withwalden/Ohmyfood"
     },
     "author": "walden",
     "license": "",
-    "homepage": ""
+    "homepage": "https://withwalden.github.io/Ohmyfood/"
   }
   

@@ -1,0 +1,28 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/footer";
+
+@import "./pages/alafr";
+@import "./pages/index";
+@import "./pages/lanote";
+@import "./pages/lapalette";
+@import "./pages/ledelice";
+
+
+
+/*@for $i from 1 through 5 
+    #id{$i} {
+        padding-left: $i * 5px;
+    }
+}*/

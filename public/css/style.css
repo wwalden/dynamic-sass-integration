@@ -1,0 +1,7 @@
+/*@for $i from 1 through 5 
+    #id{$i} {
+        padding-left: $i * 5px;
+    }
+}*/
+
+/*# sourceMappingURL=style.css.map */
