@@ -1,0 +1,40 @@
+
+<!--
+
+@for $i from 1 through 5 
+    #id{$i} {
+        padding-left: $i * 5px;
+    }
+}
+
+@for $i from 1 through 5 {
+    #fonctionnement > div:nth-child(#{$i}) {
+        background-color: #aaf;
+        opacity: 0;
+        animation: anim1 1s forwards;
+        animation-delay: 0.5s * $i;
+        width: 300px;
+    }
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 0;
+        padding-top: 10px;
+        font-size: 1em;
+    }
+
+    50% {
+        font-size: 1.2em;    
+    }
+
+    100% {
+        opacity: 1;
+        padding-top: 0px;
+        font-size: 1em;
+    }
+}
+
+-->
+
+

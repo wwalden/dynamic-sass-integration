@@ -1,0 +1,82 @@
+#place {
+    background-color: #EAEAEA;
+    display: flex;
+    position: static;
+    justify-content: center;
+    height: 30px;
+    padding-top: 20px;
+    box-shadow: 0px 2px 2px #cccbcb inset;
+    i {
+        display: flex;
+        font-size: 1.2em;
+        position: relative;
+        float:left;
+        right: 15px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+
+#reservez {
+    height: 247px;
+    padding-top: 40px;
+    background-color: $fifthColor;
+    h1 {
+        padding: 0px 65px 0px 65px;
+    }
+    p {
+        padding: 18px 40px 0px 40px;
+        font-size: 15px;
+        font-weight: lighter;
+    }
+    button {
+        margin: auto;
+        margin-top: 35px;
+        display: block;
+        border-radius: 50px;
+        border: none;
+        padding: 16px;
+        color: white;
+        background: radial-gradient(at 30% -40px, $secColor 34%, $primColor 87%);
+        box-shadow: 2px 2px 2px #8f8f8f;
+    }
+}
+
+
+
+#fonctionnement {
+    height: 440px;
+    h1 {
+        padding: 52px 0px 32px 20px;
+    }
+
+    #fonct1, #fonct2 {
+        @include indexDiv(grey, $fifthColor);
+    }
+
+    #fonct3 {
+        @include indexDiv($primColor, $fourthColor);
+    }
+}
+
+
+
+#restaurants {
+    height: 1165px;
+    padding-top: 60px;
+    background-color: $fifthColor;
+}
+
+#resto-title {
+    margin: 0px 20px 25px 20px; 
+}
+
+#lapalette, #lanote, #alafr, #ledelice {
+    @include restoLayout();
+}
+
+
+
+

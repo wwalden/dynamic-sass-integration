@@ -1,7 +1,239 @@
-/*@for $i from 1 through 5 
-    #id{$i} {
-        padding-left: $i * 5px;
-    }
-}*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h3 {
+  padding: 0px 0px 0px 0px;
+}
+
+h4 {
+  padding: 0px 0px 5px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  height: 60px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+  max-height: 40px;
+  max-width: 250px;
+  padding-top: 10px;
+}
+
+.footer {
+  height: 196px;
+  background-color: #353535;
+  color: white;
+}
+.footer .logo-footer {
+  width: 100px;
+  padding: 25px 0px 20px 25px;
+}
+.footer .footer-text {
+  padding-left: 25px;
+}
+.footer .footer-text p {
+  margin-bottom: 5px;
+}
+.footer .footer-text i {
+  position: relative;
+  float: left;
+  margin-right: 6px;
+}
+.footer .footer-text .extra-margin {
+  margin-right: 11px;
+}
+
+#place {
+  background-color: #EAEAEA;
+  display: flex;
+  position: static;
+  justify-content: center;
+  height: 30px;
+  padding-top: 20px;
+  box-shadow: 0px 2px 2px #cccbcb inset;
+}
+#place i {
+  display: flex;
+  font-size: 1.2em;
+  position: relative;
+  float: left;
+  right: 15px;
+}
+#place p {
+  font-size: 14px;
+}
+
+#reservez {
+  height: 247px;
+  padding-top: 40px;
+  background-color: #F6F6F6;
+}
+#reservez h1 {
+  padding: 0px 65px 0px 65px;
+}
+#reservez p {
+  padding: 18px 40px 0px 40px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+#reservez button {
+  margin: auto;
+  margin-top: 35px;
+  display: block;
+  border-radius: 50px;
+  border: none;
+  padding: 16px;
+  color: white;
+  background: radial-gradient(at 30% -40px, #FF79DA 34%, #9356DC 87%);
+  box-shadow: 2px 2px 2px #8f8f8f;
+}
+
+#fonctionnement {
+  height: 440px;
+}
+#fonctionnement h1 {
+  padding: 52px 0px 32px 20px;
+}
+#fonctionnement #fonct1, #fonctionnement #fonct2 {
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  width: calc(100%-45px);
+  margin: 0px 15px 20px 30px;
+}
+#fonctionnement #fonct1 p, #fonctionnement #fonct2 p {
+  display: flex;
+  font-size: 1.2em;
+  position: relative;
+  float: left;
+  right: 9px;
+  padding: 2px 6px 1px 6px;
+  margin-top: 30px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  border: none;
+}
+#fonctionnement #fonct1 h3, #fonctionnement #fonct2 h3 {
+  padding: 32px 0px 28px 70px;
+}
+#fonctionnement #fonct1 i, #fonctionnement #fonct2 i {
+  display: flex;
+  font-size: 1.4em;
+  position: relative;
+  float: left;
+  left: 12px;
+  padding-top: 30px;
+  color: grey;
+}
+#fonctionnement #fonct3 {
+  background-color: #ebdff8;
+  border-radius: 25px;
+  width: calc(100%-45px);
+  margin: 0px 15px 20px 30px;
+}
+#fonctionnement #fonct3 p {
+  display: flex;
+  font-size: 1.2em;
+  position: relative;
+  float: left;
+  right: 9px;
+  padding: 2px 6px 1px 6px;
+  margin-top: 30px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  border: none;
+}
+#fonctionnement #fonct3 h3 {
+  padding: 32px 0px 28px 70px;
+}
+#fonctionnement #fonct3 i {
+  display: flex;
+  font-size: 1.4em;
+  position: relative;
+  float: left;
+  left: 12px;
+  padding-top: 30px;
+  color: #9356DC;
+}
+
+#restaurants {
+  height: 1165px;
+  padding-top: 60px;
+  background-color: #F6F6F6;
+}
+
+#resto-title {
+  margin: 0px 20px 25px 20px;
+}
+
+#lapalette, #lanote, #alafr, #ledelice {
+  border-radius: 25px;
+  height: 250px;
+  background-color: white;
+  margin: 0px 20px 17px 20px;
+  width: calc(100% - 36px);
+  box-shadow: 2px 2px 2px #F2F2F2;
+}
+#lapalette .img-resto, #lanote .img-resto, #alafr .img-resto, #ledelice .img-resto {
+  object-fit: cover;
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#lapalette .text-resto, #lanote .text-resto, #alafr .text-resto, #ledelice .text-resto {
+  padding: 20px 0px 0px 14px;
+}
+#lapalette .text-resto p, #lanote .text-resto p, #alafr .text-resto p, #ledelice .text-resto p {
+  font-weight: lighter;
+}
+#lapalette .text-resto i, #lanote .text-resto i, #alafr .text-resto i, #ledelice .text-resto i {
+  display: flex;
+  font-size: 1.6em;
+  position: relative;
+  float: right;
+  right: 20px;
+  bottom: 36px;
+}
+#lapalette .text-resto i:hover, #lanote .text-resto i:hover, #alafr .text-resto i:hover, #ledelice .text-resto i:hover {
+  color: white;
+}
+#lapalette .new-resto, #lanote .new-resto, #alafr .new-resto, #ledelice .new-resto {
+  color: #078766;
+  background-color: #99E2D0;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 6px 12px 6px 12px;
+  position: relative;
+  float: right;
+  bottom: 220px;
+  left: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+.footer {
+    height: 196px;
+    background-color: #353535;
+    color: white;
+    .logo-footer{
+        width: 100px;
+        padding: 25px 0px 20px 25px;
+    }
+    .footer-text {
+        padding-left: 25px;
+        p{
+            margin-bottom: 5px;
+        }
+        i {
+            position: relative;
+            float: left;
+            margin-right: 6px;   
+        }
+        .extra-margin{
+            margin-right: 11px;
+        }
+    }
+}
