@@ -35,6 +35,38 @@
     }
 }
 
+
+
+    // POUR ALAFR.SCSS
+
+
+    @for $i from 2 through 4 {
+        .fooddesc_box:nth-of-type(#{$i}) {
+            opacity: 0;
+            animation: anim1 1s forwards;
+            animation-delay: 0.5s * $i;
+        }
+    }
+
+    @keyframes anim1 {
+        0% {
+            opacity: 0;
+            padding-top: 10px;
+            font-size: 1em;
+        }
+
+        50% {
+            font-size: 1.2em;    
+        }
+
+        100% {
+            opacity: 1;
+            padding-top: 0px;
+            font-size: 1em;
+        }
+    }
+
+
 -->
 
 

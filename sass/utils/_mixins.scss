@@ -64,16 +64,30 @@
         p{
             font-weight:lighter;
         }
-        i{
+        i:nth-child(3){
             display: flex;
             font-size: 1.6em;
             position: relative;
             float:right;
             right: 20px;
             bottom: 36px;
-            &:hover{
-              color: white;
+            &:hover{    
+                display: none;}
+            &:hover + i:nth-child(4){    
+                display: flex !important;
             }
+        }
+        i:nth-child(4){
+            display: none;
+            font-size: 1.6em;
+            position: relative;
+            float:right;
+            right: 20px;
+            bottom: 36px;
+            background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     .new-resto {
@@ -86,5 +100,40 @@
         float: right;
         bottom: 220px;
         left: 12px;
+    }
+}
+
+
+
+
+@mixin fooddesc-box {
+    background-color: white;
+    border-radius: 15px;
+    height: 68px;
+    margin: 0px 13px 14px 13px;
+    box-shadow: 2px 2px 2px #F2F2F2;
+    display: flex;
+    justify-content: flex-start;
+    .main{
+        margin: 15px 20px 12px 11px;
+        width: calc(100% - 1px);
+        h4{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 100;
+        }
+        p:nth-child(3){
+            font-weight: 500;
+        }
+    }
+    .green{
+        background-color: white;
+        width: 1px;
+        height: 1px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 }

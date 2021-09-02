@@ -1,0 +1,114 @@
+.resto__img2 {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+#menu__title {
+    p {
+        font-family: 'Shrikhand', cursive;
+        font-size: 20px;
+        padding: 30px 0px 2px 19px;
+    }
+}
+
+
+.resto__menu {
+    height: 1200px;
+    background-color: $fifthColor;
+}
+
+// Mettre ici un ::after ?
+.underline {
+    height: 3px;
+    width: 40px;
+    background-color: $thirdColor;
+    margin: 0px 0px 14px 20px;
+}
+
+
+.fooddesc_box {
+    @include fooddesc-box();
+    &:hover{
+        .green{
+        transform: scaleX(56);
+        transform-origin: right 50%;
+        background-color: $thirdColor;
+        height: 68px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        .fooddesc_price{
+            left: 10px;
+        }
+    }
+}
+
+.green {
+    transition: transform 330ms ease-in-out;
+}
+
+
+
+
+
+.fooddesc_price {
+    display: flex;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    left: 0px;
+    bottom: 15px;
+
+}
+
+
+    // OK
+    .resto__menu {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        position: relative;
+        top: -25px;
+    }
+
+
+    @for $i from 3 through 5 {
+        div > div.fooddesc_box:nth-child(#{$i}) {
+            opacity: 0;
+            animation: anim1 0.5s forwards;
+            animation-delay: 0.2s * $i;
+        }
+    }
+
+    @keyframes anim1 {
+        0% {
+            opacity: 0;
+            padding-top: 10px;
+            font-size: 1em;
+        }
+
+        50% {
+            font-size: 1.2em;    
+        }
+
+        100% {
+            opacity: 1;
+            padding-top: 0px;
+            font-size: 1em;
+        }
+    }
+
+
+    button{
+        display: block;
+        margin: auto;
+        margin-top: 35px;
+        border-radius: 25px;
+        padding: 12px 30px 12px 30px;
+        background: radial-gradient(at 30% -40px, $secColor 34%, $primColor 87%);
+        border: none;
+        color: white;
+        box-shadow: 0px 2px 4px #cccbcb;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
