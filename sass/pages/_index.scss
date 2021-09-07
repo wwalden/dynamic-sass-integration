@@ -77,24 +77,3 @@
     @include restoLayout();
 }
 
-
-#svg{
-    border: none;
-}
-
-#svg_1:hover{
-        animation: anim4 1s forwards;
-
-
-    } 
-
-
-@keyframes anim4{
-    0% {fill: white;
-    }
-
-    100% {fill:blue;
-    }
-
-
-}

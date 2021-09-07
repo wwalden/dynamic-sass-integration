@@ -1,3 +1,11 @@
+@keyframes heartanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -106,10 +114,12 @@ a {
   box-shadow: 2px 2px 2px #F2F2F2;
   display: flex;
   justify-content: flex-start;
+  display: flex;
+  justify-content: space-between;
 }
 .fooddesc_box .main {
   margin: 15px 20px 12px 11px;
-  width: calc(100% - 1px);
+  width: calc(100% - 90px);
 }
 .fooddesc_box .main h4 {
   font-size: 15px;
@@ -122,36 +132,68 @@ a {
 .fooddesc_box .main p:nth-child(3) {
   font-weight: 500;
 }
-.fooddesc_box .green {
-  background-color: white;
-  width: 1px;
-  height: 1px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+.fooddesc_box :hover > p {
+  animation: priceleft 0.6s forwards;
 }
-.fooddesc_box:hover .green {
-  transform: scaleX(56);
-  transform-origin: right 50%;
+.fooddesc_box :hover + .green {
+  animation: greenzone 0.7s forwards;
+  transform-origin: 100% 50%;
   background-color: #99E2D0;
-  height: 68px;
+}
+.fooddesc_box :hover + .green > .fas {
+  transform: rotate(-360deg);
+  transition: transform 0.6s ease-in-out;
+  color: #99E2D0;
+}
+.fooddesc_box .green {
+  width: 82px;
+  background-color: white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.fooddesc_box:hover .fooddesc_price {
-  left: 10px;
-}
 
-.green {
-  transition: transform 330ms ease-in-out;
+@keyframes greenzone {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
-
+@keyframes priceleft {
+  0% {
+    left: 65px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes facheckrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fooddesc_price {
-  display: flex;
-  font-weight: bold;
   position: relative;
   float: right;
-  left: 0px;
+  left: 65px;
   bottom: 15px;
+}
+
+.fa-check {
+  color: white;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 23px 0px 0px 20px;
+  display: none;
+}
+
+i {
+  color: white;
 }
 
 .resto__menu {
@@ -206,6 +248,22 @@ button {
   box-shadow: 0px 2px 4px #cccbcb;
   font-weight: 500;
   font-size: 1.2em;
+}
+
+h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.test {
+  width: 20px;
 }
 
 #place {
@@ -356,6 +414,7 @@ button {
 #lapalette .text-resto i:nth-child(3), #lanote .text-resto i:nth-child(3), #alafr .text-resto i:nth-child(3), #ledelice .text-resto i:nth-child(3) {
   display: flex;
   font-size: 1.6em;
+  color: black;
   position: relative;
   float: right;
   right: 20px;
@@ -391,20 +450,93 @@ button {
   left: 12px;
 }
 
-#svg {
-  border: none;
+.spinner {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background: #99E2D0;
+  border-radius: 10px;
+  margin: calc(50% - 120px);
 }
 
-#svg_1:hover {
-  animation: anim4 1s forwards;
+.spinner div {
+  width: 8%;
+  height: 24%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#c4a2ec));
+  position: absolute;
+  left: 46%;
+  top: 38%;
+  opacity: 1;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px whitesmoke;
 }
 
-@keyframes anim4 {
-  0% {
-    fill: white;
+.spinner > div:nth-child(1) {
+  transform: rotate(30deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.08s;
+}
+
+.spinner > div:nth-child(2) {
+  transform: rotate(60deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.16s;
+}
+
+.spinner > div:nth-child(3) {
+  transform: rotate(90deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.24s;
+}
+
+.spinner > div:nth-child(4) {
+  transform: rotate(120deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.32s;
+}
+
+.spinner > div:nth-child(5) {
+  transform: rotate(150deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.4s;
+}
+
+.spinner > div:nth-child(6) {
+  transform: rotate(180deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.48s;
+}
+
+.spinner > div:nth-child(7) {
+  transform: rotate(210deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.56s;
+}
+
+.spinner > div:nth-child(8) {
+  transform: rotate(240deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.64s;
+}
+
+.spinner > div:nth-child(9) {
+  transform: rotate(270deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.72s;
+}
+
+.spinner > div:nth-child(10) {
+  transform: rotate(300deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.8s;
+}
+
+.spinner > div:nth-child(11) {
+  transform: rotate(330deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.88s;
+}
+
+.spinner > div:nth-child(12) {
+  transform: rotate(360deg) translate(0, -130%);
+  animation: opacitychange 1s linear infinite 0.96s;
+}
+
+@keyframes opacitychange {
+  from {
+    opacity: 1;
   }
-  100% {
-    fill: blue;
+  to {
+    opacity: 0.25;
   }
 }
 

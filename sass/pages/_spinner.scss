@@ -1,0 +1,37 @@
+
+
+.spinner{
+    position: relative;
+    width: 240px;
+    height: 240px;
+    background: $thirdColor;
+    border-radius: 10px;
+    margin: calc(50% - 120px);
+}
+
+.spinner div{
+    width: 8%;
+    height: 24%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#c4a2ec));
+    position: absolute;
+    left: 46%;
+    top: 38%;
+    opacity: 1;
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px whitesmoke;
+    
+}
+
+@for $i from 1 through 12 {
+  .spinner > div:nth-child(#{$i}) {
+      transform: rotate($i * 30deg) translate(0, -130%);
+      animation: opacitychange 1s linear infinite ($i * .08s);
+      }
+}
+
+@keyframes opacitychange {
+  from {opacity: 1;}
+  to {opacity: 0.25;}
+}
+
+

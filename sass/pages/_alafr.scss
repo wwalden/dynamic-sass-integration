@@ -29,37 +29,98 @@
 
 .fooddesc_box {
     @include fooddesc-box();
-    &:hover{
-        .green{
-        transform: scaleX(56);
-        transform-origin: right 50%;
+    display: flex;
+    justify-content: space-between;
+
+    :hover {
+        & > p{
+        animation: priceleft .6s forwards;
+        }
+    }
+
+
+
+    :hover + .green{
+        //.green:active{
+        animation: greenzone .7s forwards;
+        transform-origin: 100% 50%;
         background-color: $thirdColor;
-        height: 68px;
+        //transform: scaleX(2);
+        //animation-name: green-zone;
+        //animation-duration: 1000ms;
+        //animation: greenzone 1s forwards;
+        & > .fas{
+            transform: rotate(-360deg);
+            transition: transform .6s ease-in-out;
+            color: $thirdColor;
+        }
+    }
+
+
+    .green{
+        //display: none;
+        width: 82px;
+        background-color: white;
+       // width: 0px;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-        }
-        .fooddesc_price{
-            left: 10px;
-        }
+        //animation: greenzone 2s forwards;
+        //transform-origin: 100% 50%;
+        //transition: transform 330ms ease-in-out;
     }
 }
 
-.green {
-    transition: transform 330ms ease-in-out;
+
+
+@keyframes greenzone{
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 
+@keyframes priceleft{
+    0% {
+        left: 65px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes facheckrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 
 
 .fooddesc_price {
-    display: flex;
-    font-weight: bold;
     position: relative;
     float: right;
-    left: 0px;
+    left: 65px;
     bottom: 15px;
+}
 
+
+.fa-check{
+    color: white;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 23px 0px 0px 20px;
+    display: none;
+}
+
+i{
+    color:white;
 }
 
 
@@ -111,4 +172,21 @@
         box-shadow: 0px 2px 4px #cccbcb;
         font-weight: 500;
         font-size: 1.2em;
+    }
+
+
+    h4{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .test{
+        width: 20px;
     }
