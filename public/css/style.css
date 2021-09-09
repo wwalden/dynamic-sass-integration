@@ -16,7 +16,7 @@ body {
   font-size: 13px;
 }
 
-h1 {
+h2 {
   font-size: 20px;
 }
 
@@ -43,6 +43,10 @@ a {
   color: inherit;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 #header {
   height: 60px;
 }
@@ -58,6 +62,167 @@ a {
   padding-top: 10px;
 }
 
+@media screen and (min-width: 1024px) {
+  .resto__menu {
+    height: 560px !important;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 90px 330px 50px;
+  }
+
+  #menu__title {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  #menu__entrees {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #menu__plats {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  #menu__desserts {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  #menu__order {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  button {
+    display: flex;
+    align-content: center;
+  }
+
+  #restaurants {
+    height: 700px !important;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 280px 280px;
+  }
+
+  #resto-title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  #lapalette {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #lanote {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  #alafr {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  #ledelice {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  #grid_menu {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px;
+  }
+
+  #reservez {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 82px 70px 0px 70px;
+    border-radius: 25px;
+  }
+
+  #fonctionnement {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-right: 40px;
+  }
+
+  #restaurants {
+    padding: 60px 60px 0px 60px;
+  }
+
+  .fonc {
+    width: 80%;
+  }
+
+  #fonct0 {
+    margin-left: 210px !important;
+  }
+
+  #fonct1 {
+    margin-left: 90px !important;
+  }
+
+  #fonct2 {
+    margin-left: 60px !important;
+  }
+
+  .normalwrap {
+    white-space: inherit;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  #fonctionnement {
+    margin-right: 70px;
+    margin-left: 70px;
+    height: 470px;
+  }
+
+  #fonct1 {
+    margin-left: 60px !important;
+    width: 60%;
+  }
+
+  #fonct2 {
+    margin-left: 120px !important;
+    width: 60%;
+  }
+
+  #fonct3 {
+    margin-left: 180px !important;
+    width: 60%;
+  }
+
+  #restaurants {
+    margin-right: 90px;
+    margin-left: 90px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .resto__menu {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #dbdbdb !important;
+    border-radius: 25px;
+  }
+
+  .resto__higher {
+    height: 1240px !important;
+  }
+
+  .fooddesc_box {
+    box-shadow: none !important;
+  }
+
+  .fa-check {
+    color: #dbdbdb !important;
+  }
+}
 .footer {
   height: 196px;
   background-color: #353535;
@@ -94,15 +259,23 @@ a {
   padding: 30px 0px 2px 19px;
 }
 
-.resto__menu {
-  height: 1200px;
+.greybg {
   background-color: #F6F6F6;
+}
+
+.resto__menu {
+  height: 1160px;
+  background-color: #F6F6F6;
+}
+
+.resto__higher {
+  height: 1200px;
 }
 
 .underline {
   height: 3px;
   width: 40px;
-  background-color: #99E2D0;
+  background-color: #98e2cf;
   margin: 0px 0px 14px 20px;
 }
 
@@ -119,7 +292,7 @@ a {
 }
 .fooddesc_box .main {
   margin: 15px 20px 12px 11px;
-  width: calc(100% - 90px);
+  width: 100%;
 }
 .fooddesc_box .main h4 {
   font-size: 15px;
@@ -132,21 +305,25 @@ a {
 .fooddesc_box .main p:nth-child(3) {
   font-weight: 500;
 }
-.fooddesc_box :hover > p {
-  animation: priceleft 0.6s forwards;
+.fooddesc_box:hover .main {
+  animation: mainanim 0.7s forwards;
 }
-.fooddesc_box :hover + .green {
+.fooddesc_box:hover .green {
   animation: greenzone 0.7s forwards;
   transform-origin: 100% 50%;
-  background-color: #99E2D0;
+  background-color: #98e2cf;
 }
-.fooddesc_box :hover + .green > .fas {
+.fooddesc_box:hover .green > .fas {
   transform: rotate(-360deg);
   transition: transform 0.6s ease-in-out;
-  color: #99E2D0;
+  color: #98e2cf !important;
+  background-color: white;
+  margin: 23px 0px 0px 23px;
+  padding: 5px;
+  width: auto !important;
 }
 .fooddesc_box .green {
-  width: 82px;
+  width: 0px;
   background-color: white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -154,10 +331,18 @@ a {
 
 @keyframes greenzone {
   0% {
-    transform: scaleX(0);
+    width: 0px;
   }
   100% {
-    transform: scaleX(1);
+    width: 82px;
+  }
+}
+@keyframes mainanim {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: calc(100% - 82px);
   }
 }
 @keyframes priceleft {
@@ -177,19 +362,18 @@ a {
   }
 }
 .fooddesc_price {
-  position: relative;
   float: right;
-  left: 65px;
-  bottom: 15px;
+}
+
+.fooddesc_name {
+  width: calc(100% - 30px);
+  float: left;
 }
 
 .fa-check {
-  color: white;
-  background-color: white;
-  padding: 5px;
+  color: #F6F6F6;
   border-radius: 50%;
-  margin: 23px 0px 0px 20px;
-  display: none;
+  width: 0px;
 }
 
 i {
@@ -221,6 +405,12 @@ div > div.fooddesc_box:nth-child(5) {
   animation-delay: 1s;
 }
 
+div > div.fooddesc_box:nth-child(6) {
+  opacity: 0;
+  animation: anim1 0.5s forwards;
+  animation-delay: 1.2s;
+}
+
 @keyframes anim1 {
   0% {
     opacity: 0;
@@ -249,6 +439,10 @@ button {
   font-weight: 500;
   font-size: 1.2em;
 }
+button:hover {
+  opacity: 0.9;
+  box-shadow: 2px 3px 5px #9b9999;
+}
 
 h4 {
   text-overflow: ellipsis;
@@ -264,6 +458,15 @@ p {
 
 .test {
   width: 20px;
+}
+
+.fa-arrow-left {
+  color: black;
+  position: relative;
+  float: left;
+  top: 23px;
+  left: 30px;
+  font-size: 1.4em;
 }
 
 #place {
@@ -291,7 +494,7 @@ p {
   padding-top: 40px;
   background-color: #F6F6F6;
 }
-#reservez h1 {
+#reservez h2 {
   padding: 0px 65px 0px 65px;
 }
 #reservez p {
@@ -310,17 +513,20 @@ p {
   background: radial-gradient(at 30% -40px, #FF79DA 34%, #9356DC 87%);
   box-shadow: 2px 2px 2px #8f8f8f;
 }
+#reservez button:hover {
+  opacity: 0.9;
+  box-shadow: 2px 3px 5px #9b9999;
+}
 
 #fonctionnement {
   height: 440px;
 }
-#fonctionnement h1 {
+#fonctionnement h2 {
   padding: 52px 0px 32px 20px;
 }
 #fonctionnement #fonct1, #fonctionnement #fonct2 {
   background-color: #F6F6F6;
   border-radius: 25px;
-  width: calc(100%-45px);
   margin: 0px 15px 20px 30px;
 }
 #fonctionnement #fonct1 p, #fonctionnement #fonct2 p {
@@ -351,7 +557,6 @@ p {
 #fonctionnement #fonct3 {
   background-color: #ebdff8;
   border-radius: 25px;
-  width: calc(100%-45px);
   margin: 0px 15px 20px 30px;
 }
 #fonctionnement #fonct3 p {
@@ -440,7 +645,7 @@ p {
 }
 #lapalette .new-resto, #lanote .new-resto, #alafr .new-resto, #ledelice .new-resto {
   color: #078766;
-  background-color: #99E2D0;
+  background-color: #98e2cf;
   font-weight: bold;
   border-radius: 3px;
   padding: 6px 12px 6px 12px;
@@ -450,16 +655,29 @@ p {
   left: 12px;
 }
 
-.spinner {
+.fa-map-marker-alt {
+  color: black;
+}
+
+#fullcontent {
+  animation: pageload 3s forwards;
+}
+
+#spin-content {
+  animation: spinanim 3s forwards;
+}
+
+#spinner {
+  animation: newnewnew 3s forwards;
   position: relative;
   width: 240px;
   height: 240px;
-  background: #99E2D0;
+  background: #98e2cf;
   border-radius: 10px;
-  margin: calc(50% - 120px);
+  margin: 100px 0px 0px calc(50% - 120px);
 }
 
-.spinner div {
+#spinner div {
   width: 8%;
   height: 24%;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#c4a2ec));
@@ -471,62 +689,62 @@ p {
   box-shadow: 0px 0px 2px whitesmoke;
 }
 
-.spinner > div:nth-child(1) {
+#spinner > div:nth-child(1) {
   transform: rotate(30deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.08s;
 }
 
-.spinner > div:nth-child(2) {
+#spinner > div:nth-child(2) {
   transform: rotate(60deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.16s;
 }
 
-.spinner > div:nth-child(3) {
+#spinner > div:nth-child(3) {
   transform: rotate(90deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.24s;
 }
 
-.spinner > div:nth-child(4) {
+#spinner > div:nth-child(4) {
   transform: rotate(120deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.32s;
 }
 
-.spinner > div:nth-child(5) {
+#spinner > div:nth-child(5) {
   transform: rotate(150deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.4s;
 }
 
-.spinner > div:nth-child(6) {
+#spinner > div:nth-child(6) {
   transform: rotate(180deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.48s;
 }
 
-.spinner > div:nth-child(7) {
+#spinner > div:nth-child(7) {
   transform: rotate(210deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.56s;
 }
 
-.spinner > div:nth-child(8) {
+#spinner > div:nth-child(8) {
   transform: rotate(240deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.64s;
 }
 
-.spinner > div:nth-child(9) {
+#spinner > div:nth-child(9) {
   transform: rotate(270deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.72s;
 }
 
-.spinner > div:nth-child(10) {
+#spinner > div:nth-child(10) {
   transform: rotate(300deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.8s;
 }
 
-.spinner > div:nth-child(11) {
+#spinner > div:nth-child(11) {
   transform: rotate(330deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.88s;
 }
 
-.spinner > div:nth-child(12) {
+#spinner > div:nth-child(12) {
   transform: rotate(360deg) translate(0, -130%);
   animation: opacitychange 1s linear infinite 0.96s;
 }
@@ -539,5 +757,62 @@ p {
     opacity: 0.25;
   }
 }
+@keyframes spinanim {
+  0% {
+    opacity: 1;
+    z-index: 9;
+  }
+  99% {
+    opacity: 1;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9;
+  }
+}
+@keyframes newnewnew {
+  0% {
+    width: 240px;
+    height: 240px;
+    margin: 100px 0px 0px calc(50% - 120px);
+  }
+  99% {
+    width: 240px;
+    height: 240px;
+    margin: 100px 0px 0px calc(50% - 120px);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+  }
+}
+@keyframes pageload {
+  0% {
+    opacity: 0;
+    z-index: -9;
+  }
+  99% {
+    opacity: 0;
+    z-index: -9;
+  }
+  100% {
+    opacity: 1;
+    z-index: 9;
+  }
+}
+/*
+@keyframes spindesap{
+  0% {display: none;}
+  100% {display: none;}
+}
+
+@keyframes bodyanim {
+  0% {opacity: 0; z-index: -9;}
+  99% {opacity: 0; z-index: -9;}
+  100% {opacity: 1; z-index: 9;}
+}
+*/
 
 /*# sourceMappingURL=style.css.map */

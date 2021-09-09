@@ -12,13 +12,20 @@
     }
 }
 
-
-.resto__menu {
-    height: 1200px;
+.greybg{
     background-color: $fifthColor;
 }
 
-// Mettre ici un ::after ?
+.resto__menu {
+    height: 1160px;
+    background-color: $fifthColor;
+}
+
+.resto__higher{
+    height: 1200px;
+}
+
+
 .underline {
     height: 3px;
     width: 40px;
@@ -32,41 +39,32 @@
     display: flex;
     justify-content: space-between;
 
-    :hover {
-        & > p{
-        animation: priceleft .6s forwards;
-        }
-    }
-
-
-
-    :hover + .green{
-        //.green:active{
-        animation: greenzone .7s forwards;
-        transform-origin: 100% 50%;
-        background-color: $thirdColor;
-        //transform: scaleX(2);
-        //animation-name: green-zone;
-        //animation-duration: 1000ms;
-        //animation: greenzone 1s forwards;
-        & > .fas{
-            transform: rotate(-360deg);
-            transition: transform .6s ease-in-out;
-            color: $thirdColor;
+    &:hover{  
+        .main{
+            animation: mainanim .7s forwards;
+        }      
+        .green{
+            animation: greenzone .7s forwards;
+            transform-origin: 100% 50%;
+            background-color: $thirdColor;
+            & > .fas{
+                transform: rotate(-360deg);
+                transition: transform .6s ease-in-out;
+                color: $thirdColor !important;
+                background-color: white;
+                margin: 23px 0px 0px 23px;
+                padding: 5px;
+                width: auto !important;
+            }
         }
     }
 
 
     .green{
-        //display: none;
-        width: 82px;
+        width: 0px;
         background-color: white;
-       // width: 0px;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-        //animation: greenzone 2s forwards;
-        //transform-origin: 100% 50%;
-        //transition: transform 330ms ease-in-out;
     }
 }
 
@@ -74,10 +72,21 @@
 
 @keyframes greenzone{
     0% {
-        transform: scaleX(0);
+        width: 0px;
     }
     100% {
-        transform: scaleX(1);
+        width: 82px;
+    
+    }
+}
+
+@keyframes mainanim{
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: calc(100% - 82px);
+    
     }
 }
 
@@ -103,20 +112,23 @@
 
 
 .fooddesc_price {
-    position: relative;
     float: right;
-    left: 65px;
-    bottom: 15px;
+}
+
+.fooddesc_name {
+    width: calc(100% - 30px);
+    float: left;
 }
 
 
 .fa-check{
-    color: white;
-    background-color: white;
-    padding: 5px;
+    color: $fifthColor;
+    //background-color: $fifthColor;
     border-radius: 50%;
-    margin: 23px 0px 0px 20px;
-    display: none;
+    //margin: 23px 0px 0px 20px;
+    //padding: 5px;
+    width: 0px;
+
 }
 
 i{
@@ -133,7 +145,7 @@ i{
     }
 
 
-    @for $i from 3 through 5 {
+    @for $i from 3 through 6 {
         div > div.fooddesc_box:nth-child(#{$i}) {
             opacity: 0;
             animation: anim1 0.5s forwards;
@@ -172,6 +184,10 @@ i{
         box-shadow: 0px 2px 4px #cccbcb;
         font-weight: 500;
         font-size: 1.2em;
+        &:hover{
+            opacity: 0.9;
+            box-shadow: 2px 3px 5px #9b9999;
+        }
     }
 
 
@@ -189,4 +205,14 @@ i{
 
     .test{
         width: 20px;
+    }
+
+
+    .fa-arrow-left{
+        color: black;
+        position: relative;
+        float: left;
+        top: 23px;
+        left: 30px;
+        font-size: 1.4em;
     }

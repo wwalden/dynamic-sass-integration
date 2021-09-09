@@ -1,23 +1,16 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
 
-@import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
 
 @import "./layout/header";
-@import "./layout/nav";
-@import "./layout/container";
+@import "./layout/mediaq";
 @import "./layout/footer";
 
-@import "./pages/alafr";
+@import "./pages/restos";
 @import "./pages/index";
-@import "./pages/lanote";
-@import "./pages/lapalette";
-@import "./pages/ledelice";
 @import "./pages/spinner";
 
 

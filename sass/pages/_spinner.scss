@@ -1,15 +1,26 @@
 
-
-.spinner{
-    position: relative;
-    width: 240px;
-    height: 240px;
-    background: $thirdColor;
-    border-radius: 10px;
-    margin: calc(50% - 120px);
+#fullcontent{
+  animation: pageload 3s forwards;
 }
 
-.spinner div{
+
+
+#spin-content{
+  animation: spinanim 3s forwards;
+
+}
+
+#spinner{
+  animation: newnewnew 3s forwards;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background: $thirdColor;
+  border-radius: 10px;
+  margin: 100px 0px 0px calc(50% - 120px);
+}
+
+#spinner div{
     width: 8%;
     height: 24%;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#c4a2ec));
@@ -23,7 +34,7 @@
 }
 
 @for $i from 1 through 12 {
-  .spinner > div:nth-child(#{$i}) {
+  #spinner > div:nth-child(#{$i}) {
       transform: rotate($i * 30deg) translate(0, -130%);
       animation: opacitychange 1s linear infinite ($i * .08s);
       }
@@ -35,3 +46,38 @@
 }
 
 
+
+@keyframes spinanim {
+  0% {opacity: 1; z-index: 9;}
+  99% {opacity: 1; z-index: 9;}
+  100% {opacity: 0; z-index: -9;}
+}
+
+
+@keyframes newnewnew {
+  0%{width: 240px; height: 240px; margin: 100px 0px 0px calc(50% - 120px);}
+  99%{width: 240px; height: 240px; margin: 100px 0px 0px calc(50% - 120px);}
+  100%{width: 0px; height: 0px; margin: 0px;}
+}
+
+
+@keyframes pageload {
+  0% {opacity: 0; z-index: -9;}
+  99% {opacity: 0; z-index: -9;}
+  100% {opacity: 1; z-index: 9;}
+}
+
+
+
+/*
+@keyframes spindesap{
+  0% {display: none;}
+  100% {display: none;}
+}
+
+@keyframes bodyanim {
+  0% {opacity: 0; z-index: -9;}
+  99% {opacity: 0; z-index: -9;}
+  100% {opacity: 1; z-index: 9;}
+}
+*/

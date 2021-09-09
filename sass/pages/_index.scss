@@ -23,7 +23,7 @@
     height: 247px;
     padding-top: 40px;
     background-color: $fifthColor;
-    h1 {
+    h2 {
         padding: 0px 65px 0px 65px;
     }
     p {
@@ -41,6 +41,10 @@
         color: white;
         background: radial-gradient(at 30% -40px, $secColor 34%, $primColor 87%);
         box-shadow: 2px 2px 2px #8f8f8f;
+        &:hover{
+            opacity: 0.9;
+            box-shadow: 2px 3px 5px #9b9999;
+        }
     }
 }
 
@@ -48,7 +52,7 @@
 
 #fonctionnement {
     height: 440px;
-    h1 {
+    h2 {
         padding: 52px 0px 32px 20px;
     }
 
@@ -77,3 +81,6 @@
     @include restoLayout();
 }
 
+.fa-map-marker-alt{
+    color: black;
+}

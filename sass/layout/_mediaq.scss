@@ -1,0 +1,181 @@
+
+@media screen and (min-width:1024px) {
+
+    .resto__menu {
+        height: 560px !important;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 90px 330px 50px;
+    }
+    
+    #menu__title {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    #menu__entrees {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    #menu__plats {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #menu__desserts {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    #menu__order {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    button {
+        display: flex;
+        align-content: center;
+    }
+
+
+    #restaurants {
+        height: 700px !important;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 280px 280px;
+
+    }
+
+    #resto-title{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    #lapalette{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #lanote{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #alafr{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #ledelice{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+// ________________________________ //
+
+    #grid_menu {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 450px;
+    }
+    
+    #reservez {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 82px 70px 0px 70px;
+        border-radius: 25px;
+    }
+
+    #fonctionnement {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-right: 40px;
+    }
+    
+    #restaurants {
+        padding: 60px 60px 0px 60px;
+    }
+
+    .fonc{
+        width: 80%;
+    }
+
+    #fonct0{
+        margin-left: 210px !important;
+    }
+
+    #fonct1{
+        margin-left: 90px !important;
+    }
+
+    #fonct2{
+        margin-left: 60px !important;
+    }
+
+    .normalwrap{
+        white-space: inherit;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:480px) and (max-width:1024px){
+
+    #fonctionnement {
+        margin-right: 70px;
+        margin-left: 70px;
+        height: 470px;
+    }
+
+
+    #fonct1{
+        margin-left: 60px !important;
+        width: 60%;
+    }
+
+    #fonct2{
+        margin-left: 120px !important;
+        width: 60%;
+
+    }
+
+    #fonct3{
+        margin-left: 180px !important;
+        width: 60%;
+
+    }
+
+
+    #restaurants {
+        margin-right: 90px;
+        margin-left: 90px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+
+    .resto__menu {
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: #dbdbdb !important;
+        border-radius: 25px;
+    }
+
+    .resto__higher{
+        height: 1240px !important;
+    }
+    
+
+    .fooddesc_box {
+        box-shadow: none !important;
+    }
+
+    .fa-check{
+        color: #dbdbdb !important;
+    }
+
+
+
+}

@@ -31,7 +31,7 @@
 @mixin indexDiv($iconColor, $backColor) {
     background-color: $backColor;
     border-radius: 25px;
-    width: calc(100%-45px);
+ // width: calc(100%-45px);
     margin: 0px 15px 20px 30px;
     p {
         @include indexNum();
@@ -122,7 +122,7 @@
     justify-content: flex-start;
     .main{
         margin: 15px 20px 12px 11px;
-        width: calc(100% - 90px);
+        width: 100%;
         h4{
             font-size: 15px;
             font-weight: 500;
