@@ -216,3 +216,43 @@ i{
         left: 30px;
         font-size: 1.4em;
     }
+
+
+//_____________________________________________________________
+
+    #menu__title{
+        i:nth-child(2){
+            opacity: 1;
+            font-size: 1.6em;
+            color: black;
+            position: relative;
+            float:right;
+            right: 20px;
+            bottom: 30px;
+            &:hover{    
+                display: none;}
+            &:hover + i:nth-child(3){    
+                display: flex !important;
+                //animation: heartanim 1s forwards;
+            }
+        }
+        i:nth-child(3){
+            display: none;
+            font-size: 1.6em;
+            position: relative;
+            float: right;
+            right: 20px;
+            bottom: 30px;
+            background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+}
+
+@keyframes heartanim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
