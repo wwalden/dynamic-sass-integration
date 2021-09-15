@@ -1,9 +1,9 @@
 @keyframes heartanim {
   from {
-    opacity: 0;
+    background: white;
   }
   to {
-    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   }
 }
 * {
@@ -141,7 +141,7 @@ button:hover {
   #reservez {
     grid-column: 1/2;
     grid-row: 1/2;
-    margin: 82px 70px 0px 70px;
+    margin: 82px 70px 30px 70px;
     border-radius: 25px;
   }
 
@@ -156,26 +156,30 @@ button:hover {
   }
 
   .fonc {
-    width: 80%;
+    width: 65%;
   }
 
   #fonct0 {
-    margin-left: 210px !important;
+    margin-left: 30px !important;
   }
 
   #fonct1 {
-    margin-left: 90px !important;
+    margin-left: 30px !important;
   }
 
   #fonct2 {
     margin-left: 60px !important;
   }
 
+  #fonct3 {
+    margin-left: 90px !important;
+  }
+
   .normalwrap {
     white-space: inherit;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #fonctionnement {
     margin-right: 70px;
     margin-left: 70px;
@@ -207,8 +211,8 @@ button:hover {
   .resto__menu {
     margin-left: 100px;
     margin-right: 100px;
-    background-color: #dbdbdb !important;
     border-radius: 25px;
+    border: lightgray 1px solid;
   }
 
   .resto__higher {
@@ -217,10 +221,6 @@ button:hover {
 
   .fooddesc_box {
     box-shadow: none !important;
-  }
-
-  .fa-check {
-    color: #dbdbdb !important;
   }
 }
 .footer {
@@ -315,7 +315,7 @@ button:hover {
 }
 .fooddesc_box:hover .green > .fas {
   transform: rotate(-360deg);
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   color: #98e2cf !important;
   background-color: white;
   margin: 23px 0px 0px 23px;
@@ -668,6 +668,7 @@ p {
 }
 #lapalette .text-resto i:nth-child(3):hover + i:nth-child(4), #lanote .text-resto i:nth-child(3):hover + i:nth-child(4), #alafr .text-resto i:nth-child(3):hover + i:nth-child(4), #ledelice .text-resto i:nth-child(3):hover + i:nth-child(4) {
   display: flex !important;
+  transition-duration: 0.25s;
 }
 #lapalette .text-resto i:nth-child(4), #lanote .text-resto i:nth-child(4), #alafr .text-resto i:nth-child(4), #ledelice .text-resto i:nth-child(4) {
   display: none;
@@ -695,6 +696,49 @@ p {
 
 .fa-map-marker-alt {
   color: black;
+}
+
+.coeur {
+  display: flex;
+  position: relative;
+  float: right;
+  right: 20px;
+  bottom: 36px;
+  fill: url("#gradientfill");
+  width: 21px;
+  height: 21px;
+  stroke: black;
+  stroke-width: 1px;
+}
+.coeur stop {
+  transition: 1.2s;
+}
+.coeur :hover {
+  stroke: none;
+}
+
+.coeur:hover stop:first-child {
+  stop-color: #9356DC;
+}
+
+.coeur:hover stop:last-child {
+  stop-color: #FF79DA;
+}
+
+.coeur1 {
+  fill: url("#gradientfill1");
+}
+
+.coeur2 {
+  fill: url("#gradientfill2");
+}
+
+.coeur3 {
+  fill: url("#gradientfill3");
+}
+
+.coeur4 {
+  fill: url("#gradientfill4");
 }
 
 #fullcontent {

@@ -84,3 +84,56 @@
 .fa-map-marker-alt{
     color: black;
 }
+
+
+
+
+.coeur {
+    display: flex;
+    position: relative;
+    float: right;
+    right: 20px;
+    bottom: 36px;
+    fill: url('#gradientfill');
+    width: 21px;
+    height: 21px;
+    stroke: black;
+    stroke-width: 1px;
+    stop {
+        transition: 1.2s;
+      }
+    :hover{
+       // fill: linear-gradient(0deg, rgba(153,226,208,1) 44%, rgba(255,121,218,1) 100%);
+        //transition-duration: 1s;
+        stroke: none;
+    }
+}
+  
+  .coeur:hover stop:first-child {
+    stop-color: #9356DC;
+  }
+  .coeur:hover stop:last-child {
+    stop-color: #FF79DA;
+  }
+
+
+
+.coeur1 {
+    fill: url('#gradientfill1');
+}
+
+
+
+.coeur2 {
+    fill: url('#gradientfill2');
+}
+
+.coeur3 {
+    fill: url('#gradientfill3');
+}
+
+
+
+.coeur4 {
+    fill: url('#gradientfill4');
+}

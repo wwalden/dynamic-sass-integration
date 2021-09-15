@@ -83,7 +83,7 @@
     #reservez {
         grid-column: 1/2;
         grid-row: 1/2;
-        margin: 82px 70px 0px 70px;
+        margin: 82px 70px 30px 70px;
         border-radius: 25px;
     }
 
@@ -98,19 +98,23 @@
     }
 
     .fonc{
-        width: 80%;
+        width: 65%;
     }
 
     #fonct0{
-        margin-left: 210px !important;
+        margin-left: 30px !important;
     }
 
     #fonct1{
-        margin-left: 90px !important;
+        margin-left: 30px !important;
     }
 
     #fonct2{
         margin-left: 60px !important;
+    }
+
+    #fonct3{
+        margin-left: 90px !important;
     }
 
     .normalwrap{
@@ -120,7 +124,7 @@
 
 
 
-@media screen and (min-width:480px) and (max-width:1024px){
+@media screen and (min-width:768px) and (max-width:1023px){
 
     #fonctionnement {
         margin-right: 70px;
@@ -157,8 +161,8 @@
     .resto__menu {
         margin-left: 100px;
         margin-right: 100px;
-        background-color: #dbdbdb !important;
         border-radius: 25px;
+        border: lightgray 1px solid;
     }
 
     .resto__higher{
@@ -169,11 +173,5 @@
     .fooddesc_box {
         box-shadow: none !important;
     }
-
-    .fa-check{
-        color: #dbdbdb !important;
-    }
-
-
 
 }

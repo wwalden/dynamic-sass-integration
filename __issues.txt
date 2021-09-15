@@ -3,6 +3,13 @@
 - heart not working on mozilla
 - scroll right possible on à la française // OK
 - greenzone not wide enough if box too short
-
 - coeur sur le menu de la page des restos // OK
-- check les W3C validators
+
+
+Check with Philippe
+
+- warnings on W3C CSS validator
+- no progressive fill of the heart
+- Heartnot working on Firefox
+
+- SVG: stroke (bordure), ou fill
