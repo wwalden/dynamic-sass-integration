@@ -38,13 +38,16 @@
     @include fooddesc-box();
     display: flex;
     justify-content: space-between;
+    .main{
+        overflow: auto !important;
+    }
 
     &:hover{  
         .main{
             animation: mainanim .7s forwards;
         }      
         .green{
-            animation: greenzone .7s forwards;
+            animation: greenzone .7s forwards !important;
             transform-origin: 100% 50%;
             background-color: $thirdColor;
             & > .fas{
@@ -104,6 +107,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -255,4 +259,9 @@ i{
 @keyframes heartanim {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+
+#Layer_2{
+    margin-top: 6px;
 }

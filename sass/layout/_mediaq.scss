@@ -85,6 +85,7 @@
         grid-row: 1/2;
         margin: 82px 70px 30px 70px;
         border-radius: 25px;
+        @include boxshadow()
     }
 
     #fonctionnement {

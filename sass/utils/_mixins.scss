@@ -64,6 +64,8 @@
         p{
             font-weight:lighter;
         }
+
+/*
         i:nth-child(3){
             display: flex;
             font-size: 1.6em;
@@ -93,6 +95,10 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+*/
+
+
     }
     .new-resto {
         color: $NouveauColor;
@@ -139,4 +145,8 @@
         }
     }
 
+}
+
+@mixin boxshadow {
+    box-shadow: 2px 3px 5px #cccccc;
 }

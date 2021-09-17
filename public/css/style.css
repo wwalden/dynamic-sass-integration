@@ -58,6 +58,7 @@ button:hover {
   width: 50%;
   height: auto;
   max-height: 40px;
+  min-height: 25px;
   max-width: 250px;
   padding-top: 10px;
 }
@@ -143,6 +144,7 @@ button:hover {
     grid-row: 1/2;
     margin: 82px 70px 30px 70px;
     border-radius: 25px;
+    box-shadow: 2px 3px 5px #cccccc;
   }
 
   #fonctionnement {
@@ -305,11 +307,14 @@ button:hover {
 .fooddesc_box .main p:nth-child(3) {
   font-weight: 500;
 }
+.fooddesc_box .main {
+  overflow: auto !important;
+}
 .fooddesc_box:hover .main {
   animation: mainanim 0.7s forwards;
 }
 .fooddesc_box:hover .green {
-  animation: greenzone 0.7s forwards;
+  animation: greenzone 0.7s forwards !important;
   transform-origin: 100% 50%;
   background-color: #98e2cf;
 }
@@ -507,6 +512,10 @@ p {
     opacity: 1;
   }
 }
+#Layer_2 {
+  margin-top: 6px;
+}
+
 #place {
   background-color: #EAEAEA;
   display: flex;
@@ -623,6 +632,10 @@ p {
   color: #9356DC;
 }
 
+.fonc {
+  box-shadow: 2px 3px 5px #cccccc;
+}
+
 #restaurants {
   height: 1165px;
   padding-top: 60px;
@@ -650,37 +663,41 @@ p {
 }
 #lapalette .text-resto, #lanote .text-resto, #alafr .text-resto, #ledelice .text-resto {
   padding: 20px 0px 0px 14px;
+  /*
+          i:nth-child(3){
+              display: flex;
+              font-size: 1.6em;
+              color: black;
+              position: relative;
+              float:right;
+              right: 20px;
+              bottom: 36px;
+              &:hover{    
+                  display: none;}
+              &:hover + i:nth-child(4){    
+                  display: flex !important;
+                  transition-duration: .25s;
+                  // NOT WORKING -- animation: heartanim 1s forwards;
+
+              }
+          }
+          i:nth-child(4){
+              display: none;
+              font-size: 1.6em;
+              position: relative;
+              float: right;
+              right: 20px;
+              bottom: 36px;
+              background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+
+  */
 }
 #lapalette .text-resto p, #lanote .text-resto p, #alafr .text-resto p, #ledelice .text-resto p {
   font-weight: lighter;
-}
-#lapalette .text-resto i:nth-child(3), #lanote .text-resto i:nth-child(3), #alafr .text-resto i:nth-child(3), #ledelice .text-resto i:nth-child(3) {
-  display: flex;
-  font-size: 1.6em;
-  color: black;
-  position: relative;
-  float: right;
-  right: 20px;
-  bottom: 36px;
-}
-#lapalette .text-resto i:nth-child(3):hover, #lanote .text-resto i:nth-child(3):hover, #alafr .text-resto i:nth-child(3):hover, #ledelice .text-resto i:nth-child(3):hover {
-  display: none;
-}
-#lapalette .text-resto i:nth-child(3):hover + i:nth-child(4), #lanote .text-resto i:nth-child(3):hover + i:nth-child(4), #alafr .text-resto i:nth-child(3):hover + i:nth-child(4), #ledelice .text-resto i:nth-child(3):hover + i:nth-child(4) {
-  display: flex !important;
-  transition-duration: 0.25s;
-}
-#lapalette .text-resto i:nth-child(4), #lanote .text-resto i:nth-child(4), #alafr .text-resto i:nth-child(4), #ledelice .text-resto i:nth-child(4) {
-  display: none;
-  font-size: 1.6em;
-  position: relative;
-  float: right;
-  right: 20px;
-  bottom: 36px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 #lapalette .new-resto, #lanote .new-resto, #alafr .new-resto, #ledelice .new-resto {
   color: #078766;

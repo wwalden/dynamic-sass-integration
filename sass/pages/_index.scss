@@ -66,6 +66,10 @@
 }
 
 
+.fonc{
+    @include boxshadow()
+}
+
 
 #restaurants {
     height: 1165px;
@@ -103,8 +107,6 @@
         transition: 1.2s;
       }
     :hover{
-       // fill: linear-gradient(0deg, rgba(153,226,208,1) 44%, rgba(255,121,218,1) 100%);
-        //transition-duration: 1s;
         stroke: none;
     }
 }
@@ -122,8 +124,6 @@
     fill: url('#gradientfill1');
 }
 
-
-
 .coeur2 {
     fill: url('#gradientfill2');
 }
@@ -131,8 +131,6 @@
 .coeur3 {
     fill: url('#gradientfill3');
 }
-
-
 
 .coeur4 {
     fill: url('#gradientfill4');
