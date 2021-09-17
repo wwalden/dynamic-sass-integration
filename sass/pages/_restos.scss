@@ -50,6 +50,7 @@
             animation: greenzone .7s forwards !important;
             transform-origin: 100% 50%;
             background-color: $thirdColor;
+            overflow: hidden;
             & > .fas{
                 transform: rotate(-360deg);
                 transition: transform .7s ease-in-out;

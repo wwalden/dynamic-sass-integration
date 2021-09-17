@@ -317,6 +317,7 @@ button:hover {
   animation: greenzone 0.7s forwards !important;
   transform-origin: 100% 50%;
   background-color: #98e2cf;
+  overflow: hidden;
 }
 .fooddesc_box:hover .green > .fas {
   transform: rotate(-360deg);
