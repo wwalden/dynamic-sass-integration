@@ -277,7 +277,7 @@ button:hover {
 .underline {
   height: 3px;
   width: 40px;
-  background-color: #98e2cf;
+  background-color: #99E2D0;
   margin: 0px 0px 14px 20px;
 }
 
@@ -316,13 +316,13 @@ button:hover {
 .fooddesc_box:hover .green {
   animation: greenzone 0.7s forwards !important;
   transform-origin: 100% 50%;
-  background-color: #98e2cf;
+  background-color: #99E2D0;
   overflow: hidden;
 }
 .fooddesc_box:hover .green > .fas {
   transform: rotate(-360deg);
   transition: transform 0.7s ease-in-out;
-  color: #98e2cf !important;
+  color: #99E2D0 !important;
   background-color: white;
   margin: 23px 0px 0px 23px;
   padding: 5px;
@@ -475,44 +475,6 @@ p {
   font-size: 1.4em;
 }
 
-#menu__title i:nth-child(2) {
-  opacity: 1;
-  font-size: 1.6em;
-  color: black;
-  position: relative;
-  float: right;
-  right: 20px;
-  bottom: 30px;
-}
-#menu__title i:nth-child(2):hover {
-  display: none;
-}
-#menu__title i:nth-child(2):hover + i:nth-child(3) {
-  display: flex !important;
-}
-#menu__title i:nth-child(3) {
-  display: none;
-  font-size: 1.6em;
-  position: relative;
-  float: right;
-  right: 20px;
-  bottom: 30px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-
-@keyframes heartanim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #Layer_2 {
   margin-top: 6px;
 }
@@ -664,45 +626,13 @@ p {
 }
 #lapalette .text-resto, #lanote .text-resto, #alafr .text-resto, #ledelice .text-resto {
   padding: 20px 0px 0px 14px;
-  /*
-          i:nth-child(3){
-              display: flex;
-              font-size: 1.6em;
-              color: black;
-              position: relative;
-              float:right;
-              right: 20px;
-              bottom: 36px;
-              &:hover{    
-                  display: none;}
-              &:hover + i:nth-child(4){    
-                  display: flex !important;
-                  transition-duration: .25s;
-                  // NOT WORKING -- animation: heartanim 1s forwards;
-
-              }
-          }
-          i:nth-child(4){
-              display: none;
-              font-size: 1.6em;
-              position: relative;
-              float: right;
-              right: 20px;
-              bottom: 36px;
-              background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
-          }
-
-  */
 }
 #lapalette .text-resto p, #lanote .text-resto p, #alafr .text-resto p, #ledelice .text-resto p {
   font-weight: lighter;
 }
 #lapalette .new-resto, #lanote .new-resto, #alafr .new-resto, #ledelice .new-resto {
   color: #078766;
-  background-color: #98e2cf;
+  background-color: #99E2D0;
   font-weight: bold;
   border-radius: 3px;
   padding: 6px 12px 6px 12px;
@@ -772,7 +702,7 @@ p {
   position: relative;
   width: 240px;
   height: 240px;
-  background: #98e2cf;
+  background: #99E2D0;
   border-radius: 10px;
   margin: 100px 0px 0px calc(50% - 120px);
 }

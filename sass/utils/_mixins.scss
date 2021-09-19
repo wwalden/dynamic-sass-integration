@@ -31,7 +31,6 @@
 @mixin indexDiv($iconColor, $backColor) {
     background-color: $backColor;
     border-radius: 25px;
- // width: calc(100%-45px);
     margin: 0px 15px 20px 30px;
     p {
         @include indexNum();
@@ -64,40 +63,6 @@
         p{
             font-weight:lighter;
         }
-
-/*
-        i:nth-child(3){
-            display: flex;
-            font-size: 1.6em;
-            color: black;
-            position: relative;
-            float:right;
-            right: 20px;
-            bottom: 36px;
-            &:hover{    
-                display: none;}
-            &:hover + i:nth-child(4){    
-                display: flex !important;
-                transition-duration: .25s;
-                // NOT WORKING -- animation: heartanim 1s forwards;
-
-            }
-        }
-        i:nth-child(4){
-            display: none;
-            font-size: 1.6em;
-            position: relative;
-            float: right;
-            right: 20px;
-            bottom: 36px;
-            background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-*/
-
 
     }
     .new-resto {
