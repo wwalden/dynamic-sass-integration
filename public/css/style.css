@@ -526,12 +526,12 @@ p {
 #fonctionnement h2 {
   padding: 52px 0px 32px 20px;
 }
-#fonctionnement #fonct1, #fonctionnement #fonct2 {
+#fonctionnement #fonct1, #fonctionnement #fonct2, #fonctionnement #fonct3 {
   background-color: #F6F6F6;
   border-radius: 25px;
   margin: 0px 15px 20px 30px;
 }
-#fonctionnement #fonct1 p, #fonctionnement #fonct2 p {
+#fonctionnement #fonct1 p, #fonctionnement #fonct2 p, #fonctionnement #fonct3 p {
   display: flex;
   font-size: 1.2em;
   position: relative;
@@ -544,10 +544,10 @@ p {
   border-radius: 50%;
   border: none;
 }
-#fonctionnement #fonct1 h3, #fonctionnement #fonct2 h3 {
+#fonctionnement #fonct1 h3, #fonctionnement #fonct2 h3, #fonctionnement #fonct3 h3 {
   padding: 32px 0px 28px 70px;
 }
-#fonctionnement #fonct1 i, #fonctionnement #fonct2 i {
+#fonctionnement #fonct1 i, #fonctionnement #fonct2 i, #fonctionnement #fonct3 i {
   display: flex;
   font-size: 1.4em;
   position: relative;
@@ -556,12 +556,12 @@ p {
   padding-top: 30px;
   color: grey;
 }
-#fonctionnement #fonct3 {
+#fonctionnement #fonct1:hover, #fonctionnement #fonct2:hover, #fonctionnement #fonct3:hover {
   background-color: #ebdff8;
   border-radius: 25px;
   margin: 0px 15px 20px 30px;
 }
-#fonctionnement #fonct3 p {
+#fonctionnement #fonct1:hover p, #fonctionnement #fonct2:hover p, #fonctionnement #fonct3:hover p {
   display: flex;
   font-size: 1.2em;
   position: relative;
@@ -574,10 +574,10 @@ p {
   border-radius: 50%;
   border: none;
 }
-#fonctionnement #fonct3 h3 {
+#fonctionnement #fonct1:hover h3, #fonctionnement #fonct2:hover h3, #fonctionnement #fonct3:hover h3 {
   padding: 32px 0px 28px 70px;
 }
-#fonctionnement #fonct3 i {
+#fonctionnement #fonct1:hover i, #fonctionnement #fonct2:hover i, #fonctionnement #fonct3:hover i {
   display: flex;
   font-size: 1.4em;
   position: relative;

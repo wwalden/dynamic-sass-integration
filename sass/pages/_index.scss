@@ -56,13 +56,12 @@
         padding: 52px 0px 32px 20px;
     }
 
-    #fonct1, #fonct2 {
+    #fonct1, #fonct2, #fonct3{
         @include indexDiv(grey, $fifthColor);
-    }
-
-    #fonct3 {
+    &:hover{
         @include indexDiv($primColor, $fourthColor);
     }
+}
 }
 
 
